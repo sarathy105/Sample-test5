@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class TxtFacebook {
 	public static void main(String[] args) {
@@ -19,7 +20,10 @@ public class TxtFacebook {
 		 txtpass.sendKeys("Samplepassword");
 		String txt=  txtpass.getAttribute("value");	 
 		System.out.println(txt);
-		
+		driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("9876543211");
+		WebElement element = driver.findElement(By.id("day"));
+		Select s=new Select(element);
+		s.selectByIndex(2);
 	}
 
 }
