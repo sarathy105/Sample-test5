@@ -19,6 +19,9 @@ public class TxtFacebook {
 		 txtpass.sendKeys("Samplepassword");
 		String txt=  txtpass.getAttribute("value");	 
 		System.out.println(txt);
+		driver.findElement(By.xpath("//a[@id='u_0_0_7h']")).click();
+		driver.findElement(By.name("firstname")).sendKeys("sample@123");
+		driver.findElement(By.name("lastname")).sendKeys("sample_12");
 		
 	}
 
